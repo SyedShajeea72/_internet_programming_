@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>Online Exam - Login</title>
+
+    <style>
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1e293b;
+            height: 100vh;
+            margin: 0;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .login-box {
+            width: 350px;
+            background-color: #ffffff;
+            padding: 35px;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+        }
+
+        h1 {
+            text-align: center;
+            color: #f97316;
+            margin-bottom: 5px;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #64748b;
+            margin-bottom: 25px;
+        }
+
+        .input-box {
+            margin-bottom: 18px;
+        }
+
+        label {
+            display: block;
+            color: #1e293b;
+            font-weight: bold;
+            margin-bottom: 6px;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #cbd5e1;
+            border-radius: 7px;
+            box-sizing: border-box;
+            font-size: 14px;
+        }
+
+        input:focus {
+            outline: none;
+            border-color: #f97316;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            background-color: #f97316;
+            color: white;
+            border: none;
+            border-radius: 7px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #ea580c;
+        }
+
+        #message {
+            text-align: center;
+            margin-top: 15px;
+            font-size: 14px;
+        }
+
+        .register {
+            text-align: center;
+            margin-top: 20px;
+            color: #64748b;
+        }
+
+        .register a {
+            color: #f97316;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .register a:hover {
+            text-decoration: underline;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <div class="login-box">
+
+        <h1>Online Exam</h1>
+
+        <p class="subtitle">
+            Login to start your exam
+        </p>
+
+        <form onsubmit="login(event)">
+
+            <div class="input-box">
+
+                <label>Email</label>
+
+                <input
+                    type="email"
+                    id="email"
+                    placeholder="Enter your email"
+                    required
+                >
+
+            </div>
+
+
+            <div class="input-box">
+
+                <label>Password</label>
+
+                <input
+                    type="password"
+                    id="password"
+                    placeholder="Enter your password"
+                    required
+                >
+
+            </div>
+
+
+            <button type="submit">
+                Login
+            </button>
+
+        </form>
+
+
+        <p id="message"></p>
+
+
+        <div class="register">
+
+            Don't have an account?
+
+            <a href="register.html">
+                Register
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <script>
+
+        function login(event) {
+
+            event.preventDefault();
+
+            let email =
+                document.getElementById("email").value;
+
+            let password =
+                document.getElementById("password").value;
+
+            let savedEmail =
+                localStorage.getItem("email");
+
+            let savedPassword =
+                localStorage.getItem("password");
+
+            let message =
+                document.getElementById("message");
+
+
+            if (email == savedEmail &&
+                password == savedPassword) {
+
+                message.innerHTML =
+                    "Login successful!";
+
+                message.style.color = "green";
+
+                setTimeout(function() {
+
+                    window.location.href = "quiz.html";
+
+                }, 500);
+
+            } else {
+
+                message.innerHTML =
+                    "Invalid email or password";
+
+                message.style.color = "red";
+
+            }
+
+        }
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,318 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Online Exam - Quiz</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f6ff;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .quiz {
+            max-width: 700px;
+            margin: auto;
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 0 10px #ccc;
+        }
+
+        h1 {
+            text-align: center;
+            color: #2563eb;
+        }
+
+        .question {
+            margin-bottom: 25px;
+            padding: 15px;
+            background-color: #f8faff;
+            border-radius: 8px;
+        }
+
+        .question p {
+            font-weight: bold;
+        }
+
+        label {
+            display: block;
+            margin: 10px 0;
+            cursor: pointer;
+        }
+
+        button {
+            display: block;
+            margin: 20px auto 0;
+            padding: 12px 35px;
+            background-color: #2563eb;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #1d4ed8;
+        }
+
+        #result {
+            text-align: center;
+            color: green;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="quiz">
+
+    <h1>Online Exam</h1>
+
+    <!-- Question 1 -->
+    <div class="question">
+        <p>1. What does HTML stand for?</p>
+
+        <label>
+            <input type="radio" name="q1" value="a">
+            Hyper Text Markup Language
+        </label>
+
+        <label>
+            <input type="radio" name="q1" value="b">
+            High Text Machine Language
+        </label>
+
+        <label>
+            <input type="radio" name="q1" value="c">
+            Hyper Tool Multi Language
+        </label>
+    </div>
+
+    <!-- Question 2 -->
+    <div class="question">
+        <p>2. Which language is used for styling web pages?</p>
+
+        <label>
+            <input type="radio" name="q2" value="a">
+            HTML
+        </label>
+
+        <label>
+            <input type="radio" name="q2" value="b">
+            CSS
+        </label>
+
+        <label>
+            <input type="radio" name="q2" value="c">
+            Java
+        </label>
+    </div>
+
+    <!-- Question 3 -->
+    <div class="question">
+        <p>3. Which language is used to make web pages interactive?</p>
+
+        <label>
+            <input type="radio" name="q3" value="a">
+            CSS
+        </label>
+
+        <label>
+            <input type="radio" name="q3" value="b">
+            HTML
+        </label>
+
+        <label>
+            <input type="radio" name="q3" value="c">
+            JavaScript
+        </label>
+    </div>
+
+    <!-- Question 4 -->
+    <div class="question">
+        <p>4. Which tag is used to create a paragraph in HTML?</p>
+
+        <label>
+            <input type="radio" name="q4" value="a">
+            &lt;p&gt;
+        </label>
+
+        <label>
+            <input type="radio" name="q4" value="b">
+            &lt;h1&gt;
+        </label>
+
+        <label>
+            <input type="radio" name="q4" value="c">
+            &lt;br&gt;
+        </label>
+    </div>
+
+    <!-- Question 5 -->
+    <div class="question">
+        <p>5. Which symbol is used for an ID selector in CSS?</p>
+
+        <label>
+            <input type="radio" name="q5" value="a">
+            .
+        </label>
+
+        <label>
+            <input type="radio" name="q5" value="b">
+            #
+        </label>
+
+        <label>
+            <input type="radio" name="q5" value="c">
+            *
+        </label>
+    </div>
+
+    <!-- Question 6 -->
+    <div class="question">
+        <p>6. Which symbol is used for a class selector in CSS?</p>
+
+        <label>
+            <input type="radio" name="q6" value="a">
+            #
+        </label>
+
+        <label>
+            <input type="radio" name="q6" value="b">
+            /
+        </label>
+
+        <label>
+            <input type="radio" name="q6" value="c">
+            .
+        </label>
+    </div>
+
+    <!-- Question 7 -->
+    <div class="question">
+        <p>7. Which HTML tag is used to create a link?</p>
+
+        <label>
+            <input type="radio" name="q7" value="a">
+            &lt;a&gt;
+        </label>
+
+        <label>
+            <input type="radio" name="q7" value="b">
+            &lt;link&gt;
+        </label>
+
+        <label>
+            <input type="radio" name="q7" value="c">
+            &lt;url&gt;
+        </label>
+    </div>
+
+    <!-- Question 8 -->
+    <div class="question">
+        <p>8. Which keyword is used to declare a variable in JavaScript?</p>
+
+        <label>
+            <input type="radio" name="q8" value="a">
+            variable
+        </label>
+
+        <label>
+            <input type="radio" name="q8" value="b">
+            let
+        </label>
+
+        <label>
+            <input type="radio" name="q8" value="c">
+            define
+        </label>
+    </div>
+
+    <!-- Question 9 -->
+    <div class="question">
+        <p>9. Which HTML tag is used to display an image?</p>
+
+        <label>
+            <input type="radio" name="q9" value="a">
+            &lt;image&gt;
+        </label>
+
+        <label>
+            <input type="radio" name="q9" value="b">
+            &lt;pic&gt;
+        </label>
+
+        <label>
+            <input type="radio" name="q9" value="c">
+            &lt;img&gt;
+        </label>
+    </div>
+
+    <!-- Question 10 -->
+    <div class="question">
+        <p>10. Which property is used to change text color in CSS?</p>
+
+        <label>
+            <input type="radio" name="q10" value="a">
+            text-color
+        </label>
+
+        <label>
+            <input type="radio" name="q10" value="b">
+            color
+        </label>
+
+        <label>
+            <input type="radio" name="q10" value="c">
+            font-color
+        </label>
+    </div>
+
+    <button onclick="submitQuiz()">Submit Quiz</button>
+
+    <h2 id="result"></h2>
+
+</div>
+
+<script>
+function submitQuiz() {
+
+    let answers = {
+        q1: "a",
+        q2: "b",
+        q3: "c",
+        q4: "a",
+        q5: "b",
+        q6: "c",
+        q7: "a",
+        q8: "b",
+        q9: "c",
+        q10: "b"
+    };
+
+    let score = 0;
+
+    for (let question in answers) {
+
+        let selected = document.querySelector(
+            'input[name="' + question + '"]:checked'
+        );
+
+        if (selected && selected.value === answers[question]) {
+            score++;
+        }
+    }
+
+    document.getElementById("result").innerHTML =
+        "Your Score: " + score + " / 10";
+}
+</script>
+
+</body>
+</html>
+```
