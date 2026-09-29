@@ -1,0 +1,160 @@
+<html>
+<head>
+<title>JobConnect - Registration</title>
+<style>
+body{
+font-family:Arial,sans-serif;
+margin:0;
+background:#f4f6f8;
+}
+.header{
+background:#0A66C2;
+color:white;
+padding:15px 40px;
+}
+.header h2{
+display:inline;
+}
+.nav{
+float:right;
+margin-top:5px;
+}
+.nav a{
+color:white;
+text-decoration:none;
+margin-left:20px;
+}
+.form{
+width:400px;
+margin:35px auto;
+background:white;
+padding:25px;
+border-radius:10px;
+box-shadow:0 0 10px #ccc;
+}
+.form h2{
+text-align:center;
+color:#0A66C2;
+}
+label{
+font-weight:bold;
+color:#333;
+}
+input,select,textarea{
+width:100%;
+padding:8px;
+margin:6px 0 12px;
+border:1px solid #ccc;
+border-radius:5px;
+box-sizing:border-box;
+}
+input:focus,select:focus,textarea:focus{
+border-color:#0A66C2;
+outline:none;
+}
+textarea{
+height:60px;
+resize:none;
+}
+button{
+width:100%;
+padding:10px;
+background:#0A66C2;
+color:white;
+border:none;
+border-radius:5px;
+cursor:pointer;
+font-size:15px;
+}
+button:hover{
+background:#004a99;
+}
+.error{
+color:red;
+text-align:center;
+margin-bottom:10px;
+}
+</style>
+</head>
+<body>
+<div class="header">
+<h2>JobConnect</h2>
+<div class="nav">
+<a href="index.html">Home</a>
+<a href="jobs.html">Jobs</a>
+<a href="registration.html">Register</a>
+</div>
+</div>
+<div class="form">
+<h2>Job Seeker Registration</h2>
+<form onsubmit="return validate()">
+<label>Full Name</label>
+<input type="text" id="n" placeholder="Enter your name">
+<label>Email</label>
+<input type="text" id="e" placeholder="Enter your email">
+<label>Phone</label>
+<input type="text" id="p" placeholder="Enter 10 digit number">
+<label>Password</label>
+<input type="password" id="pass" placeholder="Enter password">
+<label>Confirm Password</label>
+<input type="password" id="cpass" placeholder="Confirm password">
+<label>Gender</label>
+<select id="gender">
+<option>Select Gender</option>
+<option>Male</option>
+<option>Female</option>
+</select>
+<label>Date of Birth</label>
+<input type="date" id="dob">
+<label>Qualification</label>
+<input type="text" id="qualification" placeholder="Example: B.E CSE">
+<label>Skills</label>
+<input type="text" id="skills" placeholder="Example: HTML, CSS, Java">
+<label>Experience</label>
+<input type="number" id="experience" placeholder="Years of experience">
+<label>Job Role</label>
+<input type="text" id="role" placeholder="Example: Web Developer">
+<label>Resume Link</label>
+<input type="text" id="link" placeholder="Enter resume link">
+<label>Resume</label>
+<input type="file" id="file">
+<label>Address</label>
+<textarea id="address" placeholder="Enter your address"></textarea>
+<div id="msg" class="error"></div>
+<button type="submit">
+Register
+</button>
+</form>
+</div>
+<script>
+function validate(){
+let email=/^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+let phone=/^[0-9]{10}$/;
+let pass=/^(?=.*[A-Z])(?=.*[a-z])(?=.*\d).{6,}$/;
+if(n.value.trim()==""){
+msg.innerHTML="Enter name";
+return false;
+}
+if(!email.test(e.value)){
+msg.innerHTML="Invalid email";
+return false;
+}
+if(!phone.test(p.value)){
+msg.innerHTML="Invalid phone number";
+return false;
+}
+if(!pass.test(document.getElementById("pass").value)){
+msg.innerHTML="Password must contain uppercase, lowercase and number";
+return false;
+}
+if(document.getElementById("pass").value!=cpass.value){
+msg.innerHTML="Passwords do not match";
+return false;
+}
+alert("Registration Successful!");
+window.location="jobs.html";
+return false;
+}
+</script>
+</body>
+</html>
